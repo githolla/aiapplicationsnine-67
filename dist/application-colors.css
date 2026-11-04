@@ -1,0 +1,61 @@
+/* Per-application identities. White surfaces and semantic status colors stay consistent. */
+[data-application="0"]{--app-accent:#2b4e72;--app-tint:#edf3f9;--app-color-name:"Ink blue";}
+[data-application="1"]{--app-accent:#1e6866;--app-tint:#edf7f5;--app-color-name:"Teal";}
+[data-application="2"]{--app-accent:#864929;--app-tint:#fbf2eb;--app-color-name:"Copper";}
+[data-application="3"]{--app-accent:#396146;--app-tint:#eff6f0;--app-color-name:"Forest";}
+[data-application="4"]{--app-accent:#5e6232;--app-tint:#f5f6ec;--app-color-name:"Olive";}
+[data-application="5"]{--app-accent:#2c528b;--app-tint:#eef3fb;--app-color-name:"Cobalt";}
+[data-application="6"]{--app-accent:#275e6b;--app-tint:#edf5f7;--app-color-name:"Petrol";}
+[data-application="7"]{--app-accent:#4b5e71;--app-tint:#f0f3f7;--app-color-name:"Slate blue";}
+[data-application="8"]{--app-accent:#8b4332;--app-tint:#fbf1ec;--app-color-name:"Burnt sienna";}
+[data-application="9"]{--app-accent:#1f5e7e;--app-tint:#edf5fa;--app-color-name:"Ocean";}
+[data-application="10"]{--app-accent:#755523;--app-tint:#faf5e9;--app-color-name:"Bronze";}
+[data-application="11"]{--app-accent:#4d5963;--app-tint:#f0f3f5;--app-color-name:"Graphite";}
+[data-application="12"]{--app-accent:#374761;--app-tint:#f0f2f7;--app-color-name:"Midnight";}
+[data-application="13"]{--app-accent:#266750;--app-tint:#edf7f1;--app-color-name:"Emerald";}
+body[data-application]:not([data-application="-1"]){--gold:var(--app-accent);--accent:var(--app-accent);--pale:var(--app-tint)}
+body[data-application]:not([data-application="-1"]) .experience{--accent:var(--app-accent);border-top:3px solid var(--app-accent)!important}
+body[data-application]:not([data-application="-1"]) .experience button.primary,body[data-application]:not([data-application="-1"]) #drawer button.primary,body[data-application]:not([data-application="-1"]) .experience .exp-top .righttools button.primary{background:var(--app-accent)!important;border-color:var(--app-accent)!important;color:#fff!important}
+body[data-application]:not([data-application="-1"]) .experience button.primary:hover{filter:brightness(.92)}
+body[data-application]:not([data-application="-1"]) .experience .exp-top .exp-links button.selected,body[data-application]:not([data-application="-1"]) .experience.night-product .exp-top .exp-links button.selected,body[data-application]:not([data-application="-1"]) .experience.simulation-product .exp-top .exp-links button.selected{color:var(--app-accent)!important}
+body[data-application]:not([data-application="-1"]) .experience .exp-top .exp-links button.selected:after{background:var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .experience .exp-brand>span,body[data-application]:not([data-application="-1"]) .experience .exp-top .exp-brand>span{color:var(--app-accent)!important}
+body[data-application]:not([data-application="-1"]) .studio-product-copy h2{color:var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .studio-workflow-detail>div>span,body[data-application]:not([data-application="-1"]) .architecture-icon,body[data-application]:not([data-application="-1"]) .intelligence-strip-label>.icon{color:var(--app-accent)!important}
+body[data-application]:not([data-application="-1"]) .client-product-context{border-left-color:var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .client-fit-button{background:var(--app-accent);border-color:var(--app-accent);color:white}
+body[data-application]:not([data-application="-1"]) #sidebar .showcase-navitem.selected{background:var(--app-tint)!important;color:var(--app-accent)!important}
+body[data-application]:not([data-application="-1"]) #sidebar .showcase-navitem.selected:before{background:var(--app-accent)}
+body[data-application]:not([data-application="-1"]) #sidebar .showcase-navitem.selected .sidebar-symbol{color:var(--app-accent)!important}
+body[data-application]:not([data-application="-1"]) .experience .local-link.active,body[data-application]:not([data-application="-1"]) .experience .campaign-item.selected{background:var(--app-tint)!important;color:var(--app-accent)!important;border-color:var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .experience .exp-localnav.dark .local-link.active{background:var(--app-tint)!important;color:var(--app-accent)!important}
+body[data-application]:not([data-application="-1"]) .experience .tabsline button.active,body[data-application]:not([data-application="-1"]) .experience .exp-tabline button.active{color:var(--app-accent);box-shadow:inset 0 -2px var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .experience input[type="range"],body[data-application]:not([data-application="-1"]) .experience input[type="checkbox"]{accent-color:var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .intelligence-strip{border-left:3px solid var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .intelligence-shortcuts button:hover{background:var(--app-tint);border-color:var(--app-accent);color:var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .intelligence-banner{background:var(--app-tint);border-color:var(--app-tint)}
+body[data-application]:not([data-application="-1"]) .intelligence-tabs button.active{color:var(--app-accent);box-shadow:inset 0 -2px var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .intelligence-question{background:var(--app-tint);border-color:var(--app-tint);color:var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .intelligence-scenario-results i:not(.intelligence-baseline-bar){background:var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .intelligence-range input{accent-color:var(--app-accent)}
+body[data-application]:not([data-application="-1"]) .intelligence-scenario-benefit strong{color:var(--app-accent)}
+.client-application[data-application]{border-top:3px solid var(--app-accent)}
+.client-application[data-application] .client-application-top>.icon,.client-application[data-application] h4,.client-application[data-application] .client-card-actions button:first-child{color:var(--app-accent)}
+.client-application[data-application] .client-card-preview{background:var(--app-tint);border-color:var(--app-tint)}
+/* Primary chart series follow the app; comparison and status colors remain separate. */
+body[data-application="5"] .experience svg.chart polyline:first-of-type,body[data-application="9"] .experience svg.chart polyline:first-of-type{stroke:var(--app-accent)!important}
+body[data-application="5"] .experience .pipeline-funnel>div{background:var(--app-tint);color:var(--app-accent)}
+body[data-application="0"] .context-stage i:first-child{background:var(--app-accent)}
+body[data-application="0"] .proposal-conversation .inputbox{border-color:var(--app-accent)}
+body[data-application="0"] .welcome .seal{color:var(--app-accent)!important}
+body[data-application="3"] .workshop-panel{border-top:2px solid var(--app-accent)}
+body[data-application="3"] .sim-persona input{accent-color:var(--app-accent)}
+body[data-application="6"] .planner-summary{background:var(--app-tint)}
+body[data-application="7"] .collab-projecttop .project-title>span{background:var(--app-tint);color:var(--app-accent)}
+body[data-application="13"] .health-rating-card{background:var(--app-tint);border-color:#d4e7dd}
+body[data-application="13"] .health-rating-number,body[data-application="13"] .health-rating-card .health-text-action{color:var(--app-accent)}
+body[data-application="13"] .health-rating-rule>i{background:var(--app-accent)}
+body[data-application="13"] .health-trend-chart>polyline{stroke:var(--app-accent)!important}
+body[data-application="13"] .health-trend-chart>circle{stroke:var(--app-accent)!important}
+body[data-application="13"] .health-check.done{color:var(--app-accent);background:var(--app-tint)}
+body[data-application="13"] .health-filterbar button.active{background:var(--app-tint);color:var(--app-accent);border-color:var(--app-accent)}

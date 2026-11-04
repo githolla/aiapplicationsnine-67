@@ -1,0 +1,9 @@
+/* Unboxed, individual application marks with stronger small-size definition. */
+#sidebar .showcase-navitem .sidebar-symbol{width:22px;height:24px;flex:0 0 22px;color:var(--nav-icon,#526d7d)!important;background:none!important;border:0!important;box-shadow:none!important}
+#sidebar .showcase-navitem .sidebar-symbol svg{width:21px;height:21px;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;fill:none;opacity:1;overflow:visible}
+#sidebar .showcase-navitem.selected .sidebar-symbol{color:var(--nav-icon,#526d7d)!important}
+#sidebar .showcase-navitem.selected .sidebar-symbol svg{stroke-width:2.2}
+#sidebar .showcase-navitem:hover .sidebar-symbol svg{stroke-width:2.1}
+#sidebar .showcase-home>.icon{width:20px;height:20px;color:#806344;stroke-width:1.9}
+#sidebar .showcase-sidebottom button>.icon:first-child{color:#427580;width:17px;height:17px;stroke-width:1.9}
+@media(max-width:760px){#sidebar .showcase-navitem .sidebar-symbol{width:20px;height:22px;flex-basis:20px}#sidebar .showcase-navitem .sidebar-symbol svg{width:20px;height:20px}}

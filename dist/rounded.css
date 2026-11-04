@@ -1,0 +1,25 @@
+/* Consistent rounded controls across the client showcase. Icons remain unboxed. */
+body button,body .gs-button,body .agent-primary,body .client-primary,body .client-secondary,body .studio-dark{border-radius:999px}
+body :is(.tag,.badge,.pill,.health-pill,.agent-tag,.gs-tag,.demo,.finance-delta,.call-review-stamp,.agent-review-stamp){border-radius:999px}
+body :is(.tabs,.gs-segment,.intelligence-tabs,.studio-filter,.finance-controls,.agent-prompts){border-radius:20px}
+body :is(.tabs button,.exp-links button,.gs-segment button,.intelligence-tabs button,.gs-assessment-buttons button,.gs-prompt-row button,.gs-citations button,.agent-prompts button){border-radius:999px}
+body :is(input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=file]),select){border-radius:14px}
+body textarea{border-radius:15px}
+body :is(.card,.finance-scorecard,.case-tile,.collection-product,.health-card,.health-panel,.intelligence-banner,.intelligence-source,.intelligence-answer,.intelligence-recommendation,.agent-case,.agent-library,.agent-knowledge,.agent-request-card,.agent-execution,.agent-controls,.agent-inbox>button,.agent-citation,.agent-empty,.gs-member-context,.gs-member-message,.gs-resource-grid>button,.gs-scope-card,.gs-product-summary,.gs-table-panel,.gs-before-after,.gs-readiness-score,.gs-question-list,.gs-success-metrics,.gs-member-list,.gs-member-detail,.call-opening-visual,.call-demonstrate>div:last-child>button,.call-guide,.call-proof,.call-product-intelligence,.call-clarify,.call-value-summary,.call-review>article,.call-conflict,.call-no-suggestions){border-radius:17px}
+body :is(.gs-boundary,.gs-suggestion,.gs-member-message,.call-held,.agent-gap,.agent-evidence,.agent-incoming){border-radius:14px}
+body .gs-workspace>.exp-top{border-radius:17px 17px 0 0}
+body .call-next-stop{border-radius:0 0 17px 17px}
+body .gs-workspace .exp-brand>span,body .gs-journey>button,body .call-visual-path>button,body .gs-member-list>button{border-radius:0}
+body .gs-question-list>article:first-child{border-radius:17px 17px 0 0}
+body .gs-question-list>article:last-child{border-radius:0 0 17px 17px}
+body .gs-before-after{overflow:hidden}
+body .gs-before-after>section{border-radius:0}
+body .call-opening-actions .gs-button,body .call-guide>.gs-button,body .call-next-stop>.gs-button{padding-left:18px;padding-right:18px}
+body .gs-tech-credit .technology-brand,body .project-overview-tools .technology-brand{border-radius:0}
+body #sidebar .showcase-navitem,body #sidebar .showcase-home{border-radius:12px}
+body #sidebar .sidebar-symbol{border-radius:0!important;background:none!important;border:0!important}
+body .call-clarify .gs-button{padding-left:14px;padding-right:14px}
+body #drawer{border-radius:22px 0 0 22px}
+@media(max-width:760px){body #drawer{border-radius:20px 20px 0 0}body .gs-workspace .exp-links button{padding-left:12px;padding-right:12px}}
+body .gs-journey>button{border-radius:12px}
+body .gs-member-list>button{border-radius:12px}
