@@ -1,0 +1,11 @@
+/* Loaded first on AI Applications pages inside nine-67.com.
+   Undo the website's element styles inside the app so the app's own styles behave as they do
+   on a page of their own. The app's rules come later or are more specific, so they still win. */
+.n67-app :where(*:not(svg,svg *)),.n67-app :where(*:not(svg,svg *))::before,.n67-app :where(*:not(svg,svg *))::after{all:revert}
+/* Icons keep their drawing attributes; only undo the website's layout rules for them. */
+.n67-app :where(svg){display:revert;vertical-align:revert;max-width:revert;height:revert}
+.n67-app{display:block;position:relative;isolation:isolate}
+
+/* Panels pinned to the window start below the website's fixed header. */
+.n67-app #overlay,.n67-app .modal-backdrop{top:var(--n67-site-header,0px)!important}
+.n67-app #sidebar{top:var(--n67-site-header,0px)}

@@ -1,0 +1,11 @@
+{
+  "name": "nine67-ai-applications",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node integration/build.mjs"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.49"
+  }
+}
