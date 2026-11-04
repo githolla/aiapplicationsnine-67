@@ -23,7 +23,7 @@ const CATALOG=[
 {name:'Operations Agent',accent:'#006e78',tint:'#ebf3f4',label:'OPERATIONS CONTROL',headline:'Operations queue',sub:'Sample request queue · Approval-led execution',tabs:['Work queue','Task register','Approval history'],action:'New request',cols:['Request','Source','Owner','Due','Status'],rows:[['Prepare new client workspace','Email','Alex Morgan','Nov 06','Needs approval'],['Confirm contractor access','Teams','Taylor Kim','Nov 05','Missing context'],['Summarize weekly delivery','SharePoint','Jordan Ellis','Nov 06','Ready for review'],['Review data exception','Email','Unassigned','Nov 04','Needs triage']],library:[['Workspace setup','Reviewed draft','Alex Morgan','Today'],['Weekly summary','Approved locally','Jordan Ellis','Yesterday'],['Access request','Awaiting IT review','Taylor Kim','Yesterday']],libcols:['Work item','Decision','Owner','When'],ai:'The workspace request has a clear goal but requires approved access and an accountable owner before execution. Draft the task breakdown and checklist, identify the missing context, and route the proposal for review. No external workspace or account is created from this demo.'}
 ];
 const ID=Number(document.body.dataset.app),APP=CATALOG[ID];
-const sector=sectorCase(new URLSearchParams(location.search).get('industry'),ID);
+const sector=sectorCase(resolveIndustry(new URLSearchParams(location.search).get('industry')),ID);
 if(sector){
   const [question,source,output,decision]=sector.example;
   Object.assign(APP,{
@@ -37,21 +37,143 @@ if(sector){
   });
 }
 // Illustrative monthly activity for the reporting views, independent of the individual case.
-const sectorActivity={
-  "Aerospace & Defense":[18, 21, 20, 24],
-  "Energy & Utilities":[32, 36, 34, 39],
-  "MedTech & Life Sciences":[26, 29, 27, 32],
-  "Food & Beverage":[62, 69, 65, 74],
-  "Commercial Real Estate":[21, 23, 26, 25],
-  'Manufacturing':[46,51,49,56], 'Engineering & Professional Services':[12,15,13,17],
-  'Field Service':[74,81,78,86], 'Financial Services':[39,45,42,48],
-  'Wholesale Distribution':[94,89,102,98], 'Transportation & Logistics':[67,72,71,76],
-  'Construction':[18,16,21,19], 'Automotive Aftermarket':[53,60,57,65]
+const sectorActivity = {
+ "Accounting Services": [
+  41,
+  38,
+  44,
+  52
+ ],
+ "Aerospace & Defense": [
+  18,
+  21,
+  20,
+  24
+ ],
+ "Automotive Aftermarket": [
+  53,
+  60,
+  57,
+  65
+ ],
+ "Banking & Financial Services": [
+  39,
+  45,
+  42,
+  48
+ ],
+ "Commercial Real Estate": [
+  21,
+  23,
+  26,
+  25
+ ],
+ "Construction": [
+  18,
+  16,
+  21,
+  19
+ ],
+ "Consulting Firms": [
+  22,
+  25,
+  24,
+  27
+ ],
+ "Distribution": [
+  94,
+  89,
+  102,
+  98
+ ],
+ "Energy & Utilities": [
+  32,
+  36,
+  34,
+  39
+ ],
+ "Engineering & Architecture": [
+  12,
+  15,
+  13,
+  17
+ ],
+ "Field & Home Services": [
+  81,
+  88,
+  85,
+  93
+ ],
+ "Food, Beverage & Hospitality": [
+  68,
+  75,
+  71,
+  80
+ ],
+ "Healthcare & Life Sciences": [
+  44,
+  49,
+  47,
+  53
+ ],
+ "IT Services": [
+  58,
+  63,
+  61,
+  68
+ ],
+ "Legal Services": [
+  33,
+  36,
+  31,
+  38
+ ],
+ "Manufacturing": [
+  46,
+  51,
+  49,
+  56
+ ],
+ "Marketing Services": [
+  41,
+  44,
+  39,
+  47
+ ],
+ "Private Equity Portfolios": [
+  16,
+  19,
+  18,
+  22
+ ],
+ "Professional Services": [
+  66,
+  71,
+  69,
+  75
+ ],
+ "Retail & Consumer": [
+  82,
+  88,
+  85,
+  97
+ ],
+ "SaaS": [
+  41,
+  46,
+  44,
+  51
+ ],
+ "Supply Chain & Logistics": [
+  67,
+  72,
+  71,
+  76
+ ]
 };
 function sectorChart(){
-  const metric={4:'Budget lines checked',5:'Opportunities reviewed',6:'Assignments reviewed',8:'Records reconciled',
-    9:'Forecast inputs checked',10:'Effort observations',13:'Account reviews',14:'Ledger lines checked',
-    16:'Benefit observations',17:'Cost lines reviewed'}[ID];
+  const metric={4:'Budget revisions reviewed',5:'Opportunities reviewed',6:'Assignments reviewed',8:'Reconciliations completed',
+    9:'Forecast updates reviewed',13:'Account reviews',14:'Variance explanations drafted',17:'Margin reviews'}[ID];
   if(!metric)return '';
   return panel(metric,comparisonPlot(['July','August','September','October'],[
     {label:metric,values:sectorActivity[sector.industry]}
@@ -454,7 +576,7 @@ function decisionPreview(stage=0) {
     [artifact, subject, draft],
     ['Decision owner', handoff, flow.review]
   ];
-  const industry=new URLSearchParams(location.search).get('industry');
+  const industry=sector?.industry||'';
   const example=sector?.example;
   const industrySteps=example && [
     [industry,example[0],example[1]],

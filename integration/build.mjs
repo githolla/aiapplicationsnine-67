@@ -78,6 +78,11 @@ const scopePlugin = {
   },
 };
 
+// Folders and top-level image files the site references by relative path.
+const TOP_LEVEL_IMAGES = readdirSync(SRC).filter((name) => /\.(webp|png|jpe?g|svg)$/.test(name));
+const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const ASSET_PATTERN = new RegExp(`(["'\`(=]\\s*)(?:\\.\\./)?((?:industry-media|logos|art|screenshots|fonts)/|(?:${TOP_LEVEL_IMAGES.map(escapeRe).join('|')})(?![\\w.-]))`, 'g');
+
 function rewriteScript(code) {
   let out = code
     // Absolute and back links to portfolio pages.
@@ -94,7 +99,7 @@ function rewriteScript(code) {
     // Theme variables are set on the scoped container, not <html>.
     .replaceAll('document.documentElement.style.setProperty', "(document.querySelector('.n67-app')||document.documentElement).style.setProperty");
   // Relative asset paths in strings, attributes and url().
-  out = out.replace(/(["'`(=]\s*)(?:\.\.\/)?((?:industry-media|logos|art|screenshots|fonts)\/|nine67-logo\.png|nine67-architecture\.png|[a-z0-9-]+\.webp)/g,
+  out = out.replace(ASSET_PATTERN,
     (_, lead, path) => `${lead}${ASSET_BASE}${path}`);
   return out;
 }
