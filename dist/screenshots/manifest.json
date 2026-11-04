@@ -1,0 +1,111 @@
+{
+  "type": "Browser screenshots of the designed example application pages",
+  "captured": "2026-11-03",
+  "screens": [
+    {
+      "application": "proposal-builder",
+      "file": "proposal-builder.jpg",
+      "version": "f746dc667b"
+    },
+    {
+      "application": "lead-response",
+      "file": "lead-response.jpg",
+      "version": "6a3bdf45e2"
+    },
+    {
+      "application": "lead-triage",
+      "file": "lead-triage.jpg",
+      "version": "a98f176a34"
+    },
+    {
+      "application": "simulation-analysis",
+      "file": "simulation-analysis.jpg",
+      "version": "8e60b7eeed"
+    },
+    {
+      "application": "budget-builder",
+      "file": "budget-builder.jpg",
+      "version": "5f69d1e5b0"
+    },
+    {
+      "application": "sales-dashboard",
+      "file": "sales-dashboard.jpg",
+      "version": "6f9a9edc7c"
+    },
+    {
+      "application": "resource-allocation-platform",
+      "file": "resource-allocation-platform.jpg",
+      "version": "97211ddedf"
+    },
+    {
+      "application": "collaboration-workspace",
+      "file": "collaboration-workspace.jpg",
+      "version": "22bebda5d1"
+    },
+    {
+      "application": "insights-studio",
+      "file": "insights-studio.jpg",
+      "version": "5bfd3c91c2"
+    },
+    {
+      "application": "forecast-builder",
+      "file": "forecast-builder.jpg",
+      "version": "764e317eab"
+    },
+    {
+      "application": "roi-calculator",
+      "file": "roi-calculator.jpg",
+      "version": "e5d262aeaa"
+    },
+    {
+      "application": "project-tracker",
+      "file": "project-tracker.jpg",
+      "version": "3ea5b26878"
+    },
+    {
+      "application": "nightwatch",
+      "file": "nightwatch.jpg",
+      "version": "26657b4ba4"
+    },
+    {
+      "application": "client-health",
+      "file": "client-health.jpg",
+      "version": "d8ec0a001c"
+    },
+    {
+      "application": "fp&a-dashboard",
+      "file": "fp&a-dashboard.jpg",
+      "version": "2efd47f1d9"
+    },
+    {
+      "application": "business-cases",
+      "file": "business-cases.jpg",
+      "version": "dc367b069b"
+    },
+    {
+      "application": "impact-os",
+      "file": "impact-os.jpg",
+      "version": "d2c807083d"
+    },
+    {
+      "application": "client-profitability",
+      "file": "client-profitability.jpg",
+      "version": "32497657ba"
+    },
+    {
+      "application": "tech-support-agent",
+      "file": "tech-support-agent.jpg",
+      "version": "f033593189"
+    },
+    {
+      "application": "knowledge-agent",
+      "file": "knowledge-agent.jpg",
+      "version": "f71b83a845"
+    },
+    {
+      "application": "operations-agent",
+      "file": "operations-agent.jpg",
+      "version": "1176c8b8a5"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "claude": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/claude-color.svg",
+  "openai": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/openai.svg",
+  "microsoft": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/microsoft-color.svg",
+  "azure": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/azure-color.svg",
+  "vercel": "https://vercel.com/geist/brands/assets/vercel-symbol-black.svg",
+  "supabase": "https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-icon.svg",
+  "teams": "https://www.microsoft.com/content/dam/microsoft/bade/images/icons/en-us/m365-app-icons-fy26/Teams-Icon-FY26.svg",
+  "sharepoint": "https://www.microsoft.com/content/dam/microsoft/bade/images/icons/en-us/m365-app-icons-fy26/SharePoint-Icon-FY26.svg",
+  "react": "https://raw.githubusercontent.com/facebook/react/main/fixtures/dom/public/react-logo.svg",
+  "python": "https://www.python.org/static/community_logos/python-logo-generic.svg",
+  "gemini": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/gemini-color.svg",
+  "langgraph": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/langgraph-color.svg",
+  "langfuse": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/langfuse-color.svg",
+  "postgres": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  "typescript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+}
