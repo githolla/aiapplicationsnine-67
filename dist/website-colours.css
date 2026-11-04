@@ -1,0 +1,35 @@
+/* Nine-67 website colours for the AI Applications demo. COLOURS ONLY: no text, layout or size changes.
+   Matches nine-67.com: cream background, near-black ink, the site's blue for small labels, near-black buttons. */
+:root{
+  --bg:#F5F0E8; --pale:#EFE8DD; --line:#E2D9CC; --white:#FBF8F3;
+  --ink:#10131A; --muted:#5C6575; --gold:#1F4E79;
+}
+html,body{background:#F5F0E8 !important;color:#10131A}
+/* Top bar: inside the website the site header is the bar above, so the app's own bar is light cream with a hairline */
+.shell>header,body>header,header{background:#EFE8DD !important;border-color:#E2D9CC !important}
+header,header button,header a,header span,header .directory-brand{color:#10131A !important}
+header button.active{color:#10131A !important;border-color:#10131A !important}
+/* Headlines: the website's near-black; the accent line keeps the website's taupe */
+h1,h2,h3{color:#10131A !important}
+h1 span{color:#8A7A66 !important}
+/* Except a headline on a dark panel: it keeps Josh's own light colour */
+.portfolio-ux-close h2{color:#FAF5EB !important}
+/* Small labels in the website's blue */
+.portfolio-kicker,.portfolio-feature-label,.client-section-label,[class*=kicker],[class*=eyebrow]{color:#1F4E79 !important}
+/* Buttons: the website's near-black */
+.portfolio-primary,.n67-chat-launch{background:#10131A !important;color:#FFFFFF !important}
+.portfolio-text-button{color:#3D4553 !important}
+/* Page background: the website's cream (these two wrappers were white) */
+.shell,.project-directory,.application-demo-header,.application-screenshot-preview,.application-ai-flow,.shell>footer{background:#F5F0E8 !important}
+/* The small "BY NINE-67" line under the name, grey on the cream bar */
+header small{color:#3D4553 !important}
+/* Inside the website, the site's own menu bar is the only top bar (Jenna, 4 Nov 2026): the app's own top bar is hidden.
+   Every project page keeps its "All recent projects" link, and Technology and Our process stay on the home screen. */
+.shell>header{display:none !important}
+/* On phones the home intro reserved room for that hidden bar: close the empty gap (phones only). */
+@media (max-width:760px){.catalog-intro{padding-top:32px !important}}
+/* Headings in the website's own style (Jenna, 4 Nov 2026): Archivo, extra-bold, slightly tight, like nine-67.com.
+   Josh's app already ships Archivo (fonts/nine67-archivo.woff2, family 'Nine67 Archivo'); only the heading font setting is pointed at it. Body text stays Inter, as on the site. */
+:root{--portfolio-display:'Nine67 Archivo',Inter,-apple-system,sans-serif !important}
+.shell h1,.shell h2:not(.directory-track-heading){font-family:'Nine67 Archivo',Inter,-apple-system,sans-serif !important;font-weight:800 !important;letter-spacing:-0.033em !important}
+.shell h3{font-family:'Nine67 Archivo',Inter,-apple-system,sans-serif !important;font-weight:700 !important;letter-spacing:-0.015em !important}
