@@ -202,8 +202,7 @@ function showcaseTechnology() {
 }
 function showcaseProcess(){return `<section id="portfolio-ux-process" class="portfolio-ux-section portfolio-ux-process"><div class="portfolio-ux-section-heading"><div><span>OUR PROCESS</span><h2>Built with your team.<br>From first workflow to daily use.</h2></div><p>We lead the design and engineering. Your team brings the business context, reviews the work, and helps shape something useful.</p></div><div class="portfolio-ux-process-grid">${[['01','Understand & design','Start with one workflow. Map the task, information, handoffs, and outcome before choosing the solution.','Business owner + people doing the work','A focused scope, prototype, and agreed success measures.'],['02','Connect & build','Bring in approved information and develop a working application through short reviews with your team.','System owners + representative users','A working application with clear AI responsibilities and review points.'],['03','Test, launch & improve','Test realistic cases, launch with a small group, and refine the experience through feedback and actual use.','Workflow owner + users + subject experts','An agreed handoff, adoption plan, and measures for ongoing review.']].map(([n,h,b,team,out])=>`<article><span>${n}</span><h3>${h}</h3><p>${b}</p><dl><div><dt>YOUR TEAM</dt><dd>${team}</dd></div><div><dt>WHAT COMES OUT</dt><dd>${out}</dd></div></dl></article>`).join('')}</div><div class="portfolio-ux-process-footer"><p>We agree who needs to participate, their responsibilities, and the review cadence before the build.</p><button onclick="openProcessPage('workingTogether')">Full process & team roles ${icon('arrow')}</button></div></section>`}
 function activeIndustry(){
-  const name=new URLSearchParams(location.search).get('industry');
-  return Object.hasOwn(industryExamples,name)?name:'';
+  return resolveIndustry(new URLSearchParams(location.search).get('industry'));
 }
 function setIndustry(name){
   const url=new URL(location.href);
@@ -218,7 +217,7 @@ function setIndustry(name){
 function industryControl(){
   return `<div class="industry-control"><label for="industry-choice">See projects for your industry</label><select id="industry-choice" onchange="setIndustry(this.value)"><option value="">All industries</option>${Object.keys(industryExamples).map(name=>`<option value="${esc(name)}" ${name===activeIndustry()?'selected':''}>${esc(name)}</option>`).join('')}</select>${activeIndustry()?'<span>Every project uses this industry. Featured cases appear first in their columns.</span>':''}</div>`;
 }
-function projectDirectory(){const industry=activeIndustry();const featured=industryExamples[industry]||{};clientNeed='all';return `<div class="project-directory portfolio-ux-home"><section class="catalog-intro${activeIndustry()?' sector-home':''}" ${activeIndustry()?`style="--sector-image:url(industry-media/${sectorImages[activeIndustry()]}.webp)"`:''} aria-labelledby="catalog-title">
+function projectDirectory(){const industry=activeIndustry();const featured=industryExamples[industry]||{};clientNeed='all';return `<div class="project-directory portfolio-ux-home"><section class="catalog-intro${activeIndustry()?' sector-home':''}" ${activeIndustry()?`style="--sector-image:url(industry-media/${sectorImages[activeIndustry()]})"`:''} aria-labelledby="catalog-title">
   <span class="studio-kicker">${esc(activeIndustry()||'AI APPLICATION PORTFOLIO')}</span>
   <h1 id="catalog-title">Inside Our Recent AI Projects</h1>
   <p>Browse 21 working examples across six business functions. Open any project to see the application, the data it needs, and what the AI does.</p>
