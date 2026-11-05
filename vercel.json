@@ -5,14 +5,35 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "aiapplications.nine-67.com"
+        }
+      ],
+      "destination": "https://www.nine-67.com/ai-applications",
+      "permanent": false
+    },
+    {
       "source": "/apps/:file*",
-      "has": [{ "type": "host", "value": "aiapplications.nine-67.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "aiapplications.nine-67.com"
+        }
+      ],
       "destination": "https://www.nine-67.com/ai-applications/apps/:file*",
       "permanent": false
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "aiapplications.nine-67.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "aiapplications.nine-67.com"
+        }
+      ],
       "destination": "https://www.nine-67.com/ai-applications",
       "permanent": false
     }
