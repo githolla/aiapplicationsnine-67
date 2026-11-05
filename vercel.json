@@ -13,7 +13,7 @@
         }
       ],
       "destination": "https://www.nine-67.com/ai-applications",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/apps/:file*",
@@ -24,7 +24,7 @@
         }
       ],
       "destination": "https://www.nine-67.com/ai-applications/apps/:file*",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/:path*",
@@ -35,7 +35,7 @@
         }
       ],
       "destination": "https://www.nine-67.com/ai-applications",
-      "permanent": false
+      "permanent": true
     }
   ]
 }
